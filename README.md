@@ -1,8 +1,9 @@
-# slashR
+# slashR <img src="man/figures/logo.png" align="right" height="139" />
 
 Stop manually converting Windows backslashes to forward slashes in R.
 
 ## Installation
+...
 ```r
 # install.packages("remotes")
 remotes::install_github("RandomForestz/slashR")
