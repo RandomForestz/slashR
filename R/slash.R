@@ -16,6 +16,15 @@ slash <- function() {
   fixed <- gsub('^\"|\"$', '', path)
   # Convert backslashes to forward slashes
   fixed <- gsub("\\\\", "/", fixed)
+
+  # Add to path history
+  if (!exists("slash_history", envir = .GlobalEnv)) {
+    assign("slash_history", character(0), envir = .GlobalEnv)
+  }
+  current_history <- get("slash_history", envir = .GlobalEnv)
+  assign("slash_history", c(current_history, fixed), envir = .GlobalEnv)
+
   message("Fixed: ", fixed)
+  message("(Saved to slash_history[", length(current_history) + 1, "])")
   return(fixed)
 }
