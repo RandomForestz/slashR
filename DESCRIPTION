@@ -1,0 +1,18 @@
+Package: slashR
+Type: Package
+Title: Fix Windows File Path Backslashes
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Josh", "Carrell",
+      email = "joshdcarrell@gmail.com",
+      role = c("aut", "cre")
+    )
+  )
+Description: Converts Windows file paths with backslahes to forward slashes.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    clipr
+RoxygenNote: 7.3.3
