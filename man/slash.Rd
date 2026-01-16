@@ -2,27 +2,20 @@
 % Please edit documentation in R/slash.R
 \name{slash}
 \alias{slash}
-\title{Convert backslashes to forward slashes}
+\title{Convert backslashes to forward slashes from clipboard}
 \usage{
-slash(path)
-}
-\arguments{
-\item{path}{Character string containing a file path with backslashes.
-Use raw string syntax: r"(C:\path\to\file)"}
+slash()
 }
 \value{
 Character string with forward slashes
 }
 \description{
-Converts Windows-style backslashes to forward slashes in file paths.
-Use R's raw string syntax r"(...)" to paste paths directly from Windows.
+Reads a file path from the clipboard, converts backslashes to forward slashes,
+removes surrounding quotes, and returns the fixed path.
 }
 \examples{
 \dontrun{
-# Copy path from Windows, then paste with r"()" syntax:
-dat <- read.csv(slash(r"(C:\Users\Name\data.csv)"))
-
-# Also works with regular escaped strings:
-slash("C:\\\\Users\\\\Name\\\\data.csv")
+# Copy path from File Explorer, then:
+dat <- read.csv(slash())
 }
 }
