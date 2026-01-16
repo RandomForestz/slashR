@@ -19,6 +19,8 @@ dat <- read.csv(slash())
 
 That's it. No manual editing, no find/replace.
 
+NEW: value "slash_history" appears, a history of breadcrumbs to find your way home.
+
 ## License
 
 MIT
