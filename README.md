@@ -9,23 +9,24 @@ remotes::install_github("RandomForestz/slashR")
 ```
 
 ## Usage
+
+Copy a Windows path and paste it using R's raw string syntax `r"(...)`:
 ```r
 library(slashR)
 
-# Convert a path string
-fix_path("C:\\Users\\j\\Documents\\data.csv")
-#> [1] "C:/Users/j/Documents/data.csv"
+# Paste path directly from Windows using r"()":
+dat <- read.csv(slash(r"(S:\Projects\data\file.csv)"))
 
-# Or work directly with clipboard
-# 1. Copy a Windows path (e.g., from File Explorer)
-# 2. Run:
-fix_path_clip()
-# 3. Paste the corrected path
+# The r"()" syntax preserves backslashes, then slash() converts them to /
 ```
 
 ## Why?
 
-Windows uses backslashes in file paths, but R wants those forward slashes..... This package eliminates the tedious manual conversion that Billy Gates has given us!
+Windows uses backslashes in file paths. Thanks, Billy G but R prefers forward slashes. This package lets you paste Windows paths directly without manual find/replace, using R 4.0+'s raw string feature.
+
+## Requirements
+
+R version 4.0 or higher (for raw string support)
 
 ## License
 

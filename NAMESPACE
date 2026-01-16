@@ -2,3 +2,4 @@
 
 export(fix_path)
 export(fix_path_clip)
+export(slash)

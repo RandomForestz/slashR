@@ -16,3 +16,5 @@ LazyData: true
 Imports: 
     clipr
 RoxygenNote: 7.3.3
+URL: https://github.com/RandomForestz/slashR
+BugReports: https://github.com/RandomForestz/slashR/issues
